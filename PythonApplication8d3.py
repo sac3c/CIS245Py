@@ -74,14 +74,15 @@ def printGarageMenu():
     return int(input("Please select an option from the menu:"))
 
 def showGarage():
-    print("This should display your vehicles", pickup(car.getmake(), pickup.getmodel(), pickup.getcolor(), pickup.getfueltype(), pickup.getoption() ,pickup.getenginesize(), pickup.getnumdoors()))
-    print("This should display your vehicles", pickup(car.getmake(), pickup.getmodel(), pickup.getcolor(), pickup.getfueltype(), pickup.getoption() ,pickup.getenginesize(), pickup.getnumdoors()))
+    print("This should display your vehicles", car(car.getmake(), car.getmodel(), car.getcolor(), car.getfueltype(), car.getoption() ,car.getenginesize(), car.getnumdoors()))
+    print("This should display your vehicles", pickup(pickup.getmake(), pickup.getmodel(), pickup.getcolor(), pickup.getfueltype(), pickup.getoption() ,pickup.getenginesize(), pickup.getnumdoors()))
 
 def main():
     option_choices = {'1':'Power Mirrors' , '2':'Power locks' , '3':'Remote Start' ,
            '4': 'Backup Camera', '5':'Bluetooth' ,'6': 'Cruise control' ,
            '7':'Assisted steering' ,'8': 'Autopark' }
-    garage = []
+    garage = [car,pickup]
+
     while (True):
         garageOption = printGarageMenu()
 
@@ -130,4 +131,3 @@ def main():
 
    
 main()
-
